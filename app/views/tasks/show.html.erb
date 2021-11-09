@@ -7,4 +7,5 @@
 <% end %>
 
 <p><%= link_to "back", tasks_path %></p>
-<p><%= link_to "edit", edit_task_path %></p>
+<p><%= link_to "edit", edit_task_path(@task) %></p>
+<p><%= link_to "delete", task_path(@task), method: :delete, data: { confirm: 'Do ya really wanna?' } %></p>
